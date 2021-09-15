@@ -7,6 +7,13 @@ JOIN assistance_requests ar ON a.id = ar.assignment_id
 GROUP BY a.id, a.name, a.day, a.chapter, ar.assignment_id
 ORDER BY total_requests DESC
 
+-- ANSWER:
+-- SELECT assignments.id, name, day, chapter, count(assistance_requests) as total_requests
+-- FROM assignments
+-- JOIN assistance_requests ON assignments.id = assignment_id
+-- GROUP BY assignments.id
+-- ORDER BY total_requests DESC;
+
 
 
 
